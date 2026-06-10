@@ -19,17 +19,25 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Accueil',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Recettes',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="book.fill" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="favorites"
         options={{
           title: 'Favoris',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="heart.fill" color={color} />,
         }}
       />
+        <Tabs.Screen
+            name="details"
+            options={{
+                lazy: true,
+                href: null,
+                title: 'Recette',
+            }}
+        />
     </Tabs>
   );
 }
